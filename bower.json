@@ -23,7 +23,7 @@
     "type": "git",
     "url": "git://github.com/vaadin-component-factory/vcf-enhanced-date-picker"
   },
-  "license": "Apache-2.0",
+  "license": "https://vaadin.com/license/cval-3.0",
   "ignore": [
     "**/.*",
     "node_modules",
