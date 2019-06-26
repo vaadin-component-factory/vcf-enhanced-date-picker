@@ -12,12 +12,12 @@ This program is available under Apache License Version 2.0, available at https:/
 <link rel="import" href="../../vaadin-button/src/vaadin-button.html">
 <link rel="import" href="../../vaadin-themable-mixin/vaadin-themable-mixin.html">
 <link rel="import" href="../../vaadin-themable-mixin/vaadin-theme-property-mixin.html">
-<link rel="import" href="vaadin-month-calendar.html">
-<link rel="import" href="vaadin-infinite-scroller.html">
-<link rel="import" href="vaadin-date-picker-helper.html">
-<link rel="import" href="vaadin-date-picker-styles.html">
+<link rel="import" href="vcf-enhanced-month-calendar.html">
+<link rel="import" href="vcf-enhanced-infinite-scroller.html">
+<link rel="import" href="vcf-enhanced-date-picker-helper.html">
+<link rel="import" href="vcf-enhanced-date-picker-styles.html">
 
-<dom-module id="vaadin-date-picker-overlay-content">
+<dom-module id="vcf-enhanced-date-picker-overlay-content">
   <template>
     <style>
       :host {
@@ -74,7 +74,7 @@ This program is available under Apache License Version 2.0, available at https:/
       }
 
       [part="months"] {
-        --vaadin-infinite-scroller-item-height: 270px;
+        --vcf-enhanced-infinite-scroller-item-height: 270px;
         position: absolute;
         top: 0;
         left: 0;
@@ -88,7 +88,7 @@ This program is available under Apache License Version 2.0, available at https:/
       }
 
       [part="years"] {
-        --vaadin-infinite-scroller-item-height: 80px;
+        --vcf-enhanced-infinite-scroller-item-height: 80px;
         width: 50px;
         position: absolute;
         right: 0;
@@ -99,7 +99,7 @@ This program is available under Apache License Version 2.0, available at https:/
         -ms-user-select: none;
         user-select: none;
         /* Center the year scroller position. */
-        --vaadin-infinite-scroller-buffer-offset: 50%;
+        --vcf-enhanced-infinite-scroller-buffer-offset: 50%;
       }
 
       #scrollers[desktop] [part="years"] {
@@ -171,9 +171,9 @@ This program is available under Apache License Version 2.0, available at https:/
     </div>
 
     <div id="scrollers" desktop$="[[_desktopMode]]" on-track="_track">
-      <vaadin-infinite-scroller id="monthScroller" on-custom-scroll="_onMonthScroll" on-touchstart="_onMonthScrollTouchStart" buffer-size="3" active="[[initialPosition]]" part="months">
+      <vcf-enhanced-infinite-scroller id="monthScroller" on-custom-scroll="_onMonthScroll" on-touchstart="_onMonthScrollTouchStart" buffer-size="3" active="[[initialPosition]]" part="months">
         <template>
-          <vaadin-month-calendar
+          <vcf-enhanced-month-calendar
             i18n="[[i18n]]"
             month="[[_dateAfterXMonths(index)]]"
             selected-date="{{selectedDate}}"
@@ -185,17 +185,17 @@ This program is available under Apache License Version 2.0, available at https:/
             focused$="[[_focused]]"
             part="month"
             theme$="[[theme]]">
-          </vaadin-month-calendar>
+          </vcf-enhanced-month-calendar>
         </template>
-      </vaadin-infinite-scroller>
-      <vaadin-infinite-scroller id="yearScroller" on-tap="_onYearTap" on-custom-scroll="_onYearScroll" on-touchstart="_onYearScrollTouchStart" buffer-size="12" active="[[initialPosition]]" part="years">
+      </vcf-enhanced-infinite-scroller>
+      <vcf-enhanced-infinite-scroller id="yearScroller" on-tap="_onYearTap" on-custom-scroll="_onYearScroll" on-touchstart="_onYearScrollTouchStart" buffer-size="12" active="[[initialPosition]]" part="years">
         <template>
           <div part="year-number" role="button" current$="[[_isCurrentYear(index)]]" selected$="[[_isSelectedYear(index, selectedDate)]]">
             [[_yearAfterXYears(index)]]
           </div>
           <div part="year-separator" aria-hidden="true"></div>
         </template>
-      </vaadin-infinite-scroller>
+      </vcf-enhanced-infinite-scroller>
     </div>
 
     <div on-touchend="_preventDefault" role="toolbar" part="toolbar">
@@ -221,7 +221,7 @@ This program is available under Apache License Version 2.0, available at https:/
             Polymer.GestureEventListeners(Polymer.Element))) {
 
         static get is() {
-          return 'vaadin-date-picker-overlay-content';
+          return 'vcf-enhanced-date-picker-overlay-content';
         }
 
         static get properties() {

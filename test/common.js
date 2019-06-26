@@ -117,8 +117,8 @@ function monkeyPatchNativeFocus() {
     };
   });
 
-  customElements.whenDefined('vaadin-date-picker').then(() => {
-    const DatePickerElement = customElements.get('vaadin-date-picker');
+  customElements.whenDefined('vcf-enhanced-date-picker').then(() => {
+    const DatePickerElement = customElements.get('vcf-enhanced-date-picker');
     DatePickerElement.prototype.blur = function() {
       this._inputElement._setFocused(false);
     };

@@ -10,7 +10,7 @@ This program is available under Apache License Version 2.0, available at https:/
 <link rel="import" href="../../polymer/lib/utils/flush.html">
 <link rel="import" href="../../polymer/lib/utils/templatize.html">
 
-<dom-module id="vaadin-infinite-scroller">
+<dom-module id="vcf-enhanced-infinite-scroller">
   <template>
     <style>
       :host {
@@ -40,10 +40,10 @@ This program is available under Apache License Version 2.0, available at https:/
 
       .buffer {
         position: absolute;
-        width: var(--vaadin-infinite-scroller-buffer-width, 100%);
+        width: var(--vcf-enhanced-infinite-scroller-buffer-width, 100%);
         box-sizing: border-box;
         padding-right: 40px;
-        top: var(--vaadin-infinite-scroller-buffer-offset, 0);
+        top: var(--vcf-enhanced-infinite-scroller-buffer-offset, 0);
         animation: fadein 0.2s;
       }
 
@@ -70,7 +70,7 @@ This program is available under Apache License Version 2.0, available at https:/
     class InfiniteScrollerElement extends Polymer.Element {
 
       static get is() {
-        return 'vaadin-infinite-scroller';
+        return 'vcf-enhanced-infinite-scroller';
       }
 
       static get properties() {
@@ -257,8 +257,8 @@ This program is available under Apache License Version 2.0, available at https:/
           }
 
           const itemHeight = window.ShadyCSS
-            ? window.ShadyCSS.getComputedStyleValue(this, '--vaadin-infinite-scroller-item-height')
-            : getComputedStyle(this).getPropertyValue('--vaadin-infinite-scroller-item-height');
+            ? window.ShadyCSS.getComputedStyleValue(this, '--vcf-enhanced-infinite-scroller-item-height')
+            : getComputedStyle(this).getPropertyValue('--vcf-enhanced-infinite-scroller-item-height');
           // Use background-position temp inline style for unit conversion
           const tmpStyleProp = 'background-position';
           this.$.fullHeight.style.setProperty(tmpStyleProp, itemHeight);
@@ -304,7 +304,7 @@ This program is available under Apache License Version 2.0, available at https:/
             itemWrapper.instance = {};
 
             const contentId = InfiniteScrollerElement._contentIndex = InfiniteScrollerElement._contentIndex + 1 || 0;
-            const slotName = 'vaadin-infinite-scroller-item-content-' + contentId;
+            const slotName = 'vcf-enhanced-infinite-scroller-item-content-' + contentId;
 
             const insertionPoint = document.createElement('slot');
             insertionPoint.setAttribute('name', slotName);

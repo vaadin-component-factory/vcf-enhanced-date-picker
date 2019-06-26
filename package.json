@@ -1,9 +1,9 @@
 {
-  "name": "@vaadin/vaadin-date-picker",
+  "name": "@vaadin/vcf-enhanced-date-picker",
   "version": "4.0.2",
   "description": "Polymer element providing a date selection field with scrollable month calendar",
-  "main": "vaadin-date-picker.html",
-  "repository": "vaadin/vaadin-date-picker",
+  "main": "vcf-enhanced-date-picker.html",
+  "repository": "vaadin-component-factory/vcf-enhanced-date-picker",
   "keywords": [
     "Vaadin",
     "date-picker",
@@ -14,7 +14,7 @@
   "author": "Vaadin Ltd",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/vaadin/vaadin-date-picker/issues"
+    "url": "https://github.com/vaadin-component-factory/vcf-enhanced-date-picker/issues"
   },
   "homepage": "https://vaadin.com/components",
   "files": [

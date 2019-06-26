@@ -6,7 +6,7 @@ This program is available under Apache License Version 2.0, available at https:/
 
 <link rel="import" href="../../iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
 <link rel="import" href="../../iron-resizable-behavior/iron-resizable-behavior.html">
-<link rel="import" href="vaadin-date-picker-helper.html">
+<link rel="import" href="vcf-enhanced-date-picker-helper.html">
 
 <script>
   window.Vaadin = window.Vaadin || {};
@@ -14,7 +14,7 @@ This program is available under Apache License Version 2.0, available at https:/
   /**
    * @polymerMixin
    */
-  Vaadin.DatePickerMixin = subclass => class VaadinDatePickerMixin extends Polymer.mixinBehaviors(
+  Vaadin.DatePickerMixin = subclass => class VcfEnhancedDatePickerMixin extends Polymer.mixinBehaviors(
     [Polymer.IronResizableBehavior], subclass
   ) {
 

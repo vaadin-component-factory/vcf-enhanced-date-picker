@@ -10,8 +10,8 @@
     <h3>Date picker</h3>
     <vaadin-demo-snippet id="date-picker-basic-demos-label-and-placeholder-attributes-together">
       <template preserve-content>
-        <vaadin-date-picker label="Date" placeholder="Pick a date">
-        </vaadin-date-picker>
+        <vcf-enhanced-date-picker label="Date" placeholder="Pick a date">
+        </vcf-enhanced-date-picker>
       </template>
     </vaadin-demo-snippet>
 
@@ -19,8 +19,8 @@
     <h3>Pre-selected value</h3>
     <vaadin-demo-snippet id="date-picker-basic-demos-pre-selected-value">
       <template preserve-content>
-        <vaadin-date-picker label="Birthday" value="1980-08-14">
-        </vaadin-date-picker>
+        <vcf-enhanced-date-picker label="Birthday" value="1980-08-14">
+        </vcf-enhanced-date-picker>
       </template>
     </vaadin-demo-snippet>
 
@@ -28,8 +28,8 @@
     <h3>Disabled and readonly</h3>
     <vaadin-demo-snippet id="date-picker-basic-demos-disabled-and-readonly">
       <template preserve-content>
-        <vaadin-date-picker disabled label="Disabled input" value="1980-08-14"></vaadin-date-picker>
-        <vaadin-date-picker readonly label="Readonly input" value="1980-08-14"></vaadin-date-picker>
+        <vcf-enhanced-date-picker disabled label="Disabled input" value="1980-08-14"></vcf-enhanced-date-picker>
+        <vcf-enhanced-date-picker readonly label="Readonly input" value="1980-08-14"></vcf-enhanced-date-picker>
       </template>
     </vaadin-demo-snippet>
 
@@ -37,19 +37,19 @@
     <h3>Initial position</h3>
     <vaadin-demo-snippet id="date-picker-basic-demos-initial-position">
       <template preserve-content>
-        <vaadin-date-picker label="Birthday" initial-position="1980-01-01">
-        </vaadin-date-picker>
+        <vcf-enhanced-date-picker label="Birthday" initial-position="1980-01-01">
+        </vcf-enhanced-date-picker>
       </template>
     </vaadin-demo-snippet>
 
 
     <h3>Date range</h3>
     <p>Wrap two date pickers in <a href="https://vaadin.com/components/vaadin-custom-field"><code>&lt;vaadin-custom-field&gt;</code></a> to create a date range selector.</p>
-    <vaadin-demo-snippet id="date-picker-basic-demos-date-range" when-defined="vaadin-date-picker">
+    <vaadin-demo-snippet id="date-picker-basic-demos-date-range" when-defined="vcf-enhanced-date-picker">
       <template preserve-content>
         <vaadin-custom-field label="Date range">
-          <vaadin-date-picker id="start"></vaadin-date-picker>
-          <vaadin-date-picker id="end"></vaadin-date-picker>
+          <vcf-enhanced-date-picker id="start"></vcf-enhanced-date-picker>
+          <vcf-enhanced-date-picker id="end"></vcf-enhanced-date-picker>
         </vaadin-custom-field>
         <p>Selected range: <span></span></p>
         <script>
@@ -83,12 +83,12 @@
 
     <h3>Date picker with week numbers</h3>
     <p>Week numbers are only supported for locales that start the week on Monday.</p>
-    <vaadin-demo-snippet id="date-picker-basic-demos-date-picker-with-week-numbers" when-defined="vaadin-date-picker">
+    <vaadin-demo-snippet id="date-picker-basic-demos-date-picker-with-week-numbers" when-defined="vcf-enhanced-date-picker">
       <template preserve-content>
-        <vaadin-date-picker show-week-numbers label="Date"></vaadin-date-picker>
+        <vcf-enhanced-date-picker show-week-numbers label="Date"></vcf-enhanced-date-picker>
         <script>
           window.addDemoReadyListener('#date-picker-basic-demos-date-picker-with-week-numbers', function(document) {
-            var datepicker = document.querySelector('vaadin-date-picker');
+            var datepicker = document.querySelector('vcf-enhanced-date-picker');
             datepicker.set('i18n.firstDayOfWeek', 1);
           });
         </script>
@@ -98,7 +98,7 @@
 
     <h3>Keyboard input</h3>
     <p>You can use a 3rd party library to parse dates from the input text.</p>
-    <vaadin-demo-snippet id="date-picker-basic-demos-keyboard-input" when-defined="vaadin-date-picker">
+    <vaadin-demo-snippet id="date-picker-basic-demos-keyboard-input" when-defined="vcf-enhanced-date-picker">
       <template preserve-content>
         <!--
         Try typing the following examples:
@@ -111,10 +111,10 @@
         "next week Thursday"
         -->
 
-        <vaadin-date-picker label="Date"></vaadin-date-picker>
+        <vcf-enhanced-date-picker label="Date"></vcf-enhanced-date-picker>
         <script>
           window.addDemoReadyListener('#date-picker-basic-demos-keyboard-input', function(document) {
-            var datepicker = document.querySelector('vaadin-date-picker');
+            var datepicker = document.querySelector('vcf-enhanced-date-picker');
             datepicker.set('i18n.parseDate', function(dateString) {
               // See if we get exactly 1 match from the month names
               var matches = datepicker.i18n.monthNames.filter(function(monthName) {
@@ -137,7 +137,7 @@
     <h3>Display the clear button</h3>
     <vaadin-demo-snippet id="date-picker-basic-demos-clear-button">
       <template preserve-content>
-        <vaadin-date-picker clear-button-visible label="Date"></vaadin-date-picker>
+        <vcf-enhanced-date-picker clear-button-visible label="Date"></vcf-enhanced-date-picker>
       </template>
     </vaadin-demo-snippet>
 

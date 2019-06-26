@@ -19,7 +19,7 @@ module.exports = {
       dir: './coverage',
       reporters: ['text-summary', 'lcov'],
       include: [
-        '**/vaadin-date-picker/src/*.html'
+        '**/vcf-enhanced-date-picker/src/*.html'
       ],
       exclude: [],
       thresholds: {

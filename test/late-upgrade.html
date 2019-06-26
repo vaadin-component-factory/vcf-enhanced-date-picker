@@ -16,7 +16,7 @@
 
   <test-fixture id="datepicker">
     <template>
-      <vaadin-date-picker></vaadin-date-picker>
+      <vcf-enhanced-date-picker></vcf-enhanced-date-picker>
     </template>
   </test-fixture>
 
@@ -38,7 +38,7 @@
         var is = Polymer.Element ? datepicker instanceof Polymer.Element : Polymer.isInstance(datepicker);
         expect(is).to.be.false;
 
-        Polymer.importHref('../vaadin-date-picker.html', () => {
+        Polymer.importHref('../vcf-enhanced-date-picker.html', () => {
           expect(datepicker.value).to.equal('2000-01-01');
           done();
         });

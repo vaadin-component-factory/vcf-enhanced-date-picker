@@ -9,7 +9,7 @@
   <script src="common.js"></script>
   <link rel="import" href="../../test-fixture/test-fixture.html">
 
-  <link rel="import" href="../src/vaadin-date-picker-overlay-content.html">
+  <link rel="import" href="../src/vcf-enhanced-date-picker-overlay-content.html">
   <link rel="import" href="../../polymer/lib/utils/render-status.html">
 </head>
 
@@ -17,7 +17,7 @@
 
   <test-fixture id="overlay">
     <template>
-      <vaadin-date-picker-overlay-content></vaadin-date-picker-overlay-content>
+      <vcf-enhanced-date-picker-overlay-content></vcf-enhanced-date-picker-overlay-content>
     </template>
   </test-fixture>
 
@@ -34,7 +34,7 @@
       }
     }
 
-    describe('vaadin-date-picker-overlay', () => {
+    describe('vcf-enhanced-date-picker-overlay', () => {
       var overlay;
 
       beforeEach(done => {
@@ -126,7 +126,7 @@
 
         it('should set ignoreTaps to calendar on scroll', done => {
           listenForEvent(overlay.$.monthScroller.$.scroller, 'scroll', () => {
-            expect(overlay.$.monthScroller.querySelector('vaadin-month-calendar').ignoreTaps).to.be.true;
+            expect(overlay.$.monthScroller.querySelector('vcf-enhanced-month-calendar').ignoreTaps).to.be.true;
             done();
           });
 

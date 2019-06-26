@@ -8,16 +8,16 @@
 
 
     <h3>Localizing</h3>
-    <vaadin-demo-snippet id="date-picker-localization-demos-localizing" when-defined="vaadin-date-picker">
+    <vaadin-demo-snippet id="date-picker-localization-demos-localizing" when-defined="vcf-enhanced-date-picker">
       <template preserve-content>
-        <vaadin-date-picker label="Syntymäpäivä" value="1980-08-14">
-        </vaadin-date-picker>
+        <vcf-enhanced-date-picker label="Syntymäpäivä" value="1980-08-14">
+        </vcf-enhanced-date-picker>
         <script>
           window.addDemoReadyListener('#date-picker-localization-demos-localizing', function(document) {
             // Set up the parser library for Finnish locale
             Sugar.Date.setLocale('fi');
 
-            var datepicker = document.querySelector('vaadin-date-picker');
+            var datepicker = document.querySelector('vcf-enhanced-date-picker');
             datepicker.i18n = {
               week: 'viikko',
               calendar: 'kalenteri',

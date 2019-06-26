@@ -10,28 +10,28 @@
 
   <link rel="import" href="../../polymer/polymer.html">
   <link rel="import" href="../../polymer/lib/elements/custom-style.html">
-  <link rel="import" href="../src/vaadin-infinite-scroller.html">
+  <link rel="import" href="../src/vcf-enhanced-infinite-scroller.html">
 </head>
 
 <body>
   <test-fixture id="scroller">
     <template>
-      <vaadin-infinite-scroller buffer-size="80">
+      <vcf-enhanced-infinite-scroller buffer-size="80">
         <template>
           <div>[[index]]</div>
         </template>
-      </vaadin-infinite-scroller>
+      </vcf-enhanced-infinite-scroller>
     </template>
   </test-fixture>
 
   <script>
-    describe('vaadin-infinite-scroller', () => {
+    describe('vcf-enhanced-infinite-scroller', () => {
       var scroller;
 
       beforeEach(done => {
         scroller = fixture('scroller');
-        scroller.style.setProperty('--vaadin-infinite-scroller-item-height', '30px');
-        scroller.updateStyles({'--vaadin-infinite-scroller-item-height': '30px'});
+        scroller.style.setProperty('--vcf-enhanced-infinite-scroller-item-height', '30px');
+        scroller.updateStyles({'--vcf-enhanced-infinite-scroller-item-height': '30px'});
         scroller.active = true;
         setTimeout(() => {
           Polymer.RenderStatus.afterNextRender(scroller, () => {
